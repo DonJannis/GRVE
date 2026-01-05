@@ -280,10 +280,7 @@ se_200 <- sqrt(as.numeric(variance_200))
 ic_inf_200 <- val_200_ans - 1.96 * se_200
 ic_sup_200 <- val_200_ans + 1.96 * se_200
 
-
-cat("\n----------------------------------------------------------------\n")
 cat(" Niveau de retour 200 ans\n")
-cat("----------------------------------------------------------------\n")
 cat("Modèle utilisé : GPD (Seuil =", u_choisi, ")\n")
 cat("Probabilité mensuelle équivalente : 1 /", N_periode, "\n\n")
 
@@ -293,5 +290,6 @@ df_retour_200 <- data.frame(
   IC_Haut_95 = round(ic_sup_200, 2),
   Largeur_IC = round(ic_sup_200 - ic_inf_200, 2)
 )
+
 
 print(df_retour_200)
